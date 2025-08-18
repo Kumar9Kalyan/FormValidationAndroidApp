@@ -1,5 +1,6 @@
 package com.example.cleanarchformvalidation.presentation
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -52,6 +53,8 @@ class MainActivity : ComponentActivity() {
                             when(event){
                                 is MainViewModel.ValidationEvent.Success ->{
                                     Toast.makeText(context,"Registration Done",Toast.LENGTH_LONG).show()
+                                    context.startActivity(Intent(context, FlowActivity::class.java))
+                                    (context as? ComponentActivity)?.finish()
                                 }
                             }
                         }
