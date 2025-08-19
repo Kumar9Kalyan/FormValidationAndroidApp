@@ -64,4 +64,12 @@ android {
 
 
         implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+        // Coroutines Test
+        testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
+
+        // Turbine (for testing Flow emissions)
+        testImplementation("app.cash.turbine:turbine:1.1.0")
+
+        // Truth (for fluent assertions)
+        testImplementation("com.google.truth:truth:1.4.2")
     }
